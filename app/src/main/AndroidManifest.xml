@@ -39,6 +39,12 @@
         </activity>
         <activity android:name=".MainActivity"/>
 
+        <receiver android:name=".StartActivityOnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
 
     </application>
 
