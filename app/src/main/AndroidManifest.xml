@@ -30,14 +30,29 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
+        <activity android:name=".SettingsActivity"
+            android:label="@string/user_settings"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".TransactionHistory"
+            android:label="@string/history"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".SplashActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
 
         <receiver android:name=".StartActivityOnBootReceiver">
             <intent-filter>
@@ -45,7 +60,6 @@
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>

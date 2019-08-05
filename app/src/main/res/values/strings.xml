@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Efull New</string>
+    <string name="card_payment">Card Payment</string>
+    <string name="history">Transaction History</string>
+    <string name="print_EOD">Print End Of Day Receipt</string>
+    <string name="user_settings">User Preferences</string>
+    <string name="business_name">Business Name</string>
+    <string name="business_email">Business E-mail</string>
+    <string name="pin_management">PIN Management</string>
+    <string name="change_of_pin">Operator PIN</string>
+    <string name="change_supervisor_pin">Supervisor PIN</string>
+    <string name="change_admin_pin">Admin PIN</string>
+    <string name="actions">Actions</string>
+    <string name="EOD">End Of Day</string>
+    <string name="re_print_receipt">Re-print Receipt</string>
+    <string name="print_transaction_history">Print Transaction History</string>
+    <string name="close_batch">Close Batch</string>
+    <string name="clear_database">Clear Database</string>
+    <string name="system">System</string>
+    <string name="cloud">Cloud Database URI</string>
+    <string name="check_updates">Check For Software Updates</string>
+
 </resources>

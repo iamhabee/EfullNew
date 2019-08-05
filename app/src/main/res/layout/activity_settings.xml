@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserPreferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/user_settings"
+                android:textAlignment="viewStart"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/changeBusinessNameBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_business_center_blue_grey_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/business_name"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/changeBusinessMailBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_contact_mail_bue_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/business_email"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/tvPinManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/pin_management"
+                android:textAlignment="viewStart"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/changeOfPinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_fiber_pin_blue_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/change_of_pin"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/changeSupervisorPinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_supervisor_account_cyan_24dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/change_supervisor_pin"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/changeAdminPinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_person_pin_pink_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/change_admin_pin"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/tvActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/actions"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/eodBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_end_of_day_pink_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/EOD"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/printEODBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_print_lemon_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/print_EOD"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/reprintReceiptBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_description_purple_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/re_print_receipt"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/printTransactionHistoryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_history_purple_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/print_transaction_history"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/closeBatchBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_remove_circle_blue_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/close_batch"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/clearDatabaseBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_delete_forever_red_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/clear_database"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/tvSystem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/system"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/cloudLinkBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_cloud_yellow_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/cloud"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/otaBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_cloud_download_purple_32dp"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/check_updates"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background" />
+
+            <!--<include-->
+            <!--android:id="@+id/epmsConfigInc"-->
+            <!--layout="@layout/terminal_setup_options_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
