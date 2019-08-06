@@ -30,11 +30,18 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".SettingsActivity"
-            android:label="@string/user_settings"
+        <activity android:name=".PrintReceiptActivity"
+            android:label="@string/print_EOD"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".CardPaymentActivity"
+            android:label="@string/card_payment"
             android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".TransactionHistory"
+            android:name=".SettingsActivity"
+            android:label="@string/user_settings"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TransactionHistoryActivity"
             android:label="@string/history"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".SplashActivity">

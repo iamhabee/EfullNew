@@ -3,13 +3,9 @@ package com.sanxynet.efullnew;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.userPreferencesBtn)
     Button userPreferences;
 
-//    private static SharedPreferences sharedPref;
-    private PreferenceUtil SP;
 
 
     @Override
@@ -38,26 +32,25 @@ public class MainActivity extends AppCompatActivity {
 
         checkOsVersion();
 
-        SP = PreferenceUtil.getInstance(getApplicationContext());
-
-
     }
 
     @OnClick(R.id.cardPaymentBtn)
     public void cardPayment(View view) {
-        // TODO submit data to server...
+        Intent cardPayment = new Intent(MainActivity.this, CardPaymentActivity.class);
+        startActivity(cardPayment);
     }
 
     @OnClick(R.id.transactionHistoryBtn)
     public void transactionHistory(View view) {
-        Intent intent = new Intent(MainActivity.this, TransactionHistory.class);
-        intent.putExtra("dbType", "mainDB");
-        startActivity(intent);
+        Intent transactionHistory = new Intent(MainActivity.this, TransactionHistoryActivity.class);
+//        transactionHistory.putExtra("dbType", "mainDB");
+        startActivity(transactionHistory);
     }
 
     @OnClick(R.id.printEODBtn)
     public void printReceipt(View view) {
-        // TODO submit data to server...
+        Intent receipt = new Intent(MainActivity.this, PrintReceiptActivity.class);
+        startActivity(receipt);
     }
 
     @OnClick(R.id.userPreferencesBtn)
