@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+import com.sanxynet.efullnew.ui.MainActivity;
+
 public class StartActivityOnBootReceiver extends BroadcastReceiver {
 
     @Override

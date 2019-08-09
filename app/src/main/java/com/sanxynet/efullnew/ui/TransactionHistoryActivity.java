@@ -1,4 +1,4 @@
-package com.sanxynet.efullnew;
+package com.sanxynet.efullnew.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -9,6 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.sanxynet.efullnew.R;
+import com.sanxynet.efullnew.TransactionHistoryAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

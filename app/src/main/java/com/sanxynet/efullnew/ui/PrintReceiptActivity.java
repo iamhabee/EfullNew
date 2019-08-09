@@ -1,8 +1,10 @@
-package com.sanxynet.efullnew;
+package com.sanxynet.efullnew.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.sanxynet.efullnew.R;
 
 public class PrintReceiptActivity extends AppCompatActivity {
 

@@ -1,7 +1,10 @@
-package com.sanxynet.efullnew;
+package com.sanxynet.efullnew.utils;
 
-public class Constants {
+
+
+public final class Constants {
     public static final String PREFS = "Prefs";
+    private static final String PACKAGE_NAME = "com.sanxynet.efullnew";
     public static final String NUM_COLUMNS = "num_columns";
     public static final String OLDEST_FIRST = "oldest_first";
     public static final String COLOR_NONE = "color_none";
@@ -18,4 +21,6 @@ public class Constants {
     public static final String SHARE_INFO = "share_app_info";
     public static final String SHOW_FAB = "show_fab";
     public static final String TRASH = "trash_mode";
+
+
 }

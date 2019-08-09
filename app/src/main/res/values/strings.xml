@@ -49,5 +49,8 @@
     <string name="pref_clear_database_key" translatable="false">clear_database</string>
     <string name="msg_no_notes">No Recent Transaction has been carried out on this terminal</string>
 
-
+    <string name="enter_pin">Enter PIN</string>
+    <string name="old_pin">Please enter old PIN</string>
+    <string name="new_pin">Enter your new PIN</string>
+    <string name="confirm_pin">Confirm your new PIN</string>
 </resources>

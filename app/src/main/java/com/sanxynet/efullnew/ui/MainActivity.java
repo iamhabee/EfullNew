@@ -1,11 +1,16 @@
-package com.sanxynet.efullnew;
+package com.sanxynet.efullnew.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.sanxynet.efullnew.R;
+import com.sanxynet.efullnew.utils.Constants;
+import com.sanxynet.efullnew.utils.DataProccessor;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.userPreferencesBtn)
     Button userPreferences;
 
+//    SharedPreferences pref;
 
 
     @Override
@@ -29,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+//        pref = getSharedPreferences(Constants.PREFS, MODE_PRIVATE);
+        DataProccessor dataProccessor = new DataProccessor(this);
 
         checkOsVersion();
 
@@ -54,9 +63,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.userPreferencesBtn)
-    public void userPreferences(View view) {
+    protected void userPreferences(View view) {
+        confirmPinThenSettings();
         Intent settings = new Intent(MainActivity.this, SettingsActivity.class);
         startActivity(settings);
+    }
+
+    private void confirmPinThenSettings() {
+
     }
 
     public void checkOsVersion() {

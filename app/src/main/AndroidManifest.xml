@@ -30,20 +30,20 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".PrintReceiptActivity"
+        <activity android:name=".ui.PrintReceiptActivity"
             android:label="@string/print_EOD"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".CardPaymentActivity"
+            android:parentActivityName=".ui.MainActivity"/>
+        <activity android:name=".ui.CardPaymentActivity"
             android:label="@string/card_payment"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".ui.MainActivity"/>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".ui.SettingsActivity"
             android:label="@string/user_settings"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ui.MainActivity" />
         <activity
-            android:name=".TransactionHistoryActivity"
+            android:name=".ui.TransactionHistoryActivity"
             android:label="@string/history"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ui.MainActivity" />
         <activity android:name=".SplashActivity">
 
             <!-- <intent-filter> -->
@@ -53,7 +53,7 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
