@@ -1,5 +1,6 @@
 package com.sanxynet.efullnew;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.widget.Toast;
@@ -12,6 +13,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
     private EditTextPreference operator, supervisor, admin;
     private Preference EOD, pEod, rPrintReceipt, pTransactionHistory, closeBatch, clearDatabase;
+    private String userPermission;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -20,6 +22,16 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         operator = getPreferenceManager().findPreference(getString(R.string.pref_operator_pin_key));
         supervisor = getPreferenceManager().findPreference(getString(R.string.pref_supervisor_pin_key));
         admin = getPreferenceManager().findPreference(getString(R.string.pref_admin_pin_key));
+
+        //        get bundles from previous activity
+//        use data to set visibility of options which should be
+//        accessible to users based on their previledge
+//        Intent intent = getIntent();
+//        final String permission = intent.getStringExtra("permission");
+//        userPermission = permission;
+//disable some functions based on permission level
+//        showSettingsButtons(userPermission);
+
 
         assert operator != null;
         operator.setOnBindEditTextListener(editText ->

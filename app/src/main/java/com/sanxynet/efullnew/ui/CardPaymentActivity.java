@@ -1,4 +1,4 @@
-package com.sanxynet.efullnew;
+package com.sanxynet.efullnew.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+
+import com.sanxynet.efullnew.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

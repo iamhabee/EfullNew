@@ -1,13 +1,19 @@
 package com.sanxynet.efullnew.ui;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.sanxynet.efullnew.R;
 import com.sanxynet.efullnew.utils.Constants;
 import com.sanxynet.efullnew.utils.DataProccessor;
@@ -27,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.userPreferencesBtn)
     Button userPreferences;
 
+    DataProccessor dataProccessor;
+
 //    SharedPreferences pref;
 
 
@@ -37,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 //        pref = getSharedPreferences(Constants.PREFS, MODE_PRIVATE);
-        DataProccessor dataProccessor = new DataProccessor(this);
+        dataProccessor = new DataProccessor(this);
 
         checkOsVersion();
 
@@ -65,11 +73,64 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.userPreferencesBtn)
     protected void userPreferences(View view) {
         confirmPinThenSettings();
-        Intent settings = new Intent(MainActivity.this, SettingsActivity.class);
-        startActivity(settings);
+//        Intent settings = new Intent(MainActivity.this, SettingsActivity.class);
+//        startActivity(settings);
     }
 
     private void confirmPinThenSettings() {
+
+        // get prompts.xml view
+        LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
+        View promptView = layoutInflater.inflate(R.layout.admin_pin_dialog, null);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+        alertDialogBuilder.setView(promptView);
+
+        final EditText uPin = promptView.findViewById(R.id.pinTextField);
+//        final String savedPin = this.sharedPref.getString("opPin", "1234");
+        dataProccessor.setStr(Constants.OPERATOR_PIN, "1234");
+        dataProccessor.setStr(Constants.SUPERVISOR_PIN, "1111");
+        dataProccessor.setStr(Constants.ADMIN_PIN, "260089");
+//        final String savedSupPin = this.sharedPref.getString("supPin", "0000");
+//        final String savedAdminPin = this.sharedPref.getString("adminPin", "260089");
+
+        // setup a dialog window
+        alertDialogBuilder.setCancelable(false)
+                .setPositiveButton("Confirm", (dialog, id) -> {
+
+                    String pin = uPin.getText().toString();
+                    String permission = "";
+                    if(dataProccessor.getStr(Constants.OPERATOR_PIN).equals(pin) ||
+                            dataProccessor.getStr(Constants.SUPERVISOR_PIN).equals(pin) ||
+                            dataProccessor.getStr(Constants.ADMIN_PIN).equals(pin)){
+                        if(Constants.ADMIN_PIN.equals(pin)){
+                            dataProccessor.setStr(Constants.ADMIN, "admin");
+//                            Log.d("MainActivity", "Admin:" + pin);
+//                            permission = "admin";
+                        }else if(Constants.SUPERVISOR_PIN.equals(pin)){
+                            dataProccessor.setStr(Constants.SUPERVISOR, "supervisor");
+//                            Log.d("MainActivity", "Supervisor:" + pin);
+//                            permission = "supervisor";
+                        }else{
+                            dataProccessor.setStr(Constants.OPERATOR, "operator");
+//                            Log.d("MainActivity", "Operator:" + pin);
+//                            permission = "operator";
+                        }
+//                            display SettingsActivity page
+                        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+//
+                        startActivity(intent);
+                    }else{
+//                            alert invalid PIN
+                        Snackbar.make(findViewById(android.R.id.content), "Invalid PIN! Please try again", Snackbar.LENGTH_LONG).show();
+                    }
+                })
+                .setNegativeButton("Cancel",
+                        (dialog, id) ->
+                                dialog.cancel());
+
+        // create an alert dialog
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
 
     }
 

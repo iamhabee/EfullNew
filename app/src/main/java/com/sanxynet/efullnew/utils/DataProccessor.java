@@ -1,4 +1,4 @@
-package com.businesschallenge;
+package com.sanxynet.efullnew.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,7 +11,7 @@ public class DataProccessor {
         this.context = context;
     }
 
-    public final static String PREFS_NAME = "com.businesschallenge";
+    public final static String PREFS_NAME = "com.sanxynet.efullnew";
 
     public void setInt( String key, int value) {
         SharedPreferences sharedPref = context.getSharedPreferences(PREFS_NAME,Context.MODE_PRIVATE);
