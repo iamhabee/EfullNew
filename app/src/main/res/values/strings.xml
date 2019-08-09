@@ -47,6 +47,7 @@
     <string name="pref_close_batch_key" translatable="false">close_batch</string>
     <!-- Key name for storing clear database in SharedPreferences -->
     <string name="pref_clear_database_key" translatable="false">clear_database</string>
+    <string name="msg_no_notes">No Recent Transaction has been carried out on this terminal</string>
 
 
 </resources>

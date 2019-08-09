@@ -14,7 +14,7 @@ import java.util.TimerTask;
 
 public class CardPaymentActivity extends AppCompatActivity {
 
-    Handler handler;
+//    Handler handler;
     private TranslateAnimation moveUpwards;
 
     @Override
