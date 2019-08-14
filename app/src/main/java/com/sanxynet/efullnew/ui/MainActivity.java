@@ -3,11 +3,8 @@ package com.sanxynet.efullnew.ui;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -35,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
     DataProccessor dataProccessor;
 
-//    SharedPreferences pref;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-//        pref = getSharedPreferences(Constants.PREFS, MODE_PRIVATE);
         dataProccessor = new DataProccessor(this);
 
         checkOsVersion();
@@ -60,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.transactionHistoryBtn)
     public void transactionHistory(View view) {
         Intent transactionHistory = new Intent(MainActivity.this, TransactionHistoryActivity.class);
-//        transactionHistory.putExtra("dbType", "mainDB");
         startActivity(transactionHistory);
     }
 
@@ -73,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.userPreferencesBtn)
     protected void userPreferences(View view) {
         confirmPinThenSettings();
-//        Intent settings = new Intent(MainActivity.this, SettingsActivity.class);
-//        startActivity(settings);
+
     }
 
     private void confirmPinThenSettings() {
@@ -86,12 +78,9 @@ public class MainActivity extends AppCompatActivity {
         alertDialogBuilder.setView(promptView);
 
         final EditText uPin = promptView.findViewById(R.id.pinTextField);
-//        final String savedPin = this.sharedPref.getString("opPin", "1234");
         dataProccessor.setStr(Constants.OPERATOR_PIN, "1234");
         dataProccessor.setStr(Constants.SUPERVISOR_PIN, "1111");
         dataProccessor.setStr(Constants.ADMIN_PIN, "260089");
-//        final String savedSupPin = this.sharedPref.getString("supPin", "0000");
-//        final String savedAdminPin = this.sharedPref.getString("adminPin", "260089");
 
         // setup a dialog window
         alertDialogBuilder.setCancelable(false)

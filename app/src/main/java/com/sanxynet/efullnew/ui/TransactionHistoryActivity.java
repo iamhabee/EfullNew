@@ -18,29 +18,29 @@ import java.util.List;
 
 public class TransactionHistoryActivity extends AppCompatActivity {
 
-    private TransactionHistoryAdapter mAdapter;
+//    private TransactionHistoryAdapter mAdapter;
 //    private List<Transaction> notesList = new ArrayList<>();
-    private CoordinatorLayout coordinatorLayout;
-    private RecyclerView recyclerView;
-    private TextView noNotesView;
-    String db, note;
+//    private CoordinatorLayout coordinatorLayout;
+//    private RecyclerView recyclerView;
+//    private TextView noNotesView;
+//    String db, note;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_history);
 
-        recyclerView = findViewById(R.id.recycler_view);
-        noNotesView = findViewById(R.id.empty_notes_view);
+//        recyclerView = findViewById(R.id.recycler_view);
+//        noNotesView = findViewById(R.id.empty_notes_view);
 
 
 
 //        mAdapter = new TransactionHistoryAdapter(this, note, db);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-//        recyclerView.addItemDecoration(new MyDividerItemDecoration(this, LinearLayoutManager.VERTICAL, 16));
-        recyclerView.setAdapter(mAdapter);
+//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+//        recyclerView.setLayoutManager(mLayoutManager);
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
+////        recyclerView.addItemDecoration(new MyDividerItemDecoration(this, LinearLayoutManager.VERTICAL, 16));
+//        recyclerView.setAdapter(mAdapter);
 
 //        toggleEmptyNotes();
 
